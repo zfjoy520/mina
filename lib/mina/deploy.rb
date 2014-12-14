@@ -108,9 +108,6 @@ task :setup do
       #{echo_cmd %{chmod g+rx,u+rwx "#{releases_path}"}} &&
       #{echo_cmd %{mkdir -p "#{shared_path}"}} &&
       #{echo_cmd %{chmod g+rx,u+rwx "#{shared_path}"}} &&
-      echo "" &&
-      #{echo_cmd %{ls -la "#{deploy_to}"}} &&
-      echo "" &&
       echo "-----> Done."
     ) || (
       echo "! ERROR: Setup failed."
